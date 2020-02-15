@@ -1,11 +1,16 @@
 # EVA4
+colab Link: https://colab.research.google.com/drive/14fub0_XnIKy9do3Gnb5JLMAuJtoL8CsZ#scrollTo=MMWbLWO6FuHb
+
 
 #Session4
 
-1. Total no. of parameters=16,420
-2. EVA4_S4_15Feb2020_1 : Achieved  with lr=, batch size=
-3. EVA4_S4_15Feb2020_2 : Achieved  with lr=, batch size=
-4. EVA4_S4_15Feb2020_3 : Achieved  with lr=, batch size=
+1. Total no. of parameters=16,420 ( less than 20K parameters)
+
+99.4% Accuracy in less than 20 Epochs
+---------------------------------------
+2. EVA4_S4_15Feb2020_1 : Achieved 98.74% at 19th Epoch  with lr=0.001, batch size=64
+3. EVA4_S4_15Feb2020_2 : Achieved 99.43% at 17th Epoch with lr=0.003, batch size=64
+4. EVA4_S4_15Feb2020_3 : Achieved 99.35% at 17th Epoch with lr=0.004, batch size=64
 5. EVA4_S4_15Feb2020_Final : Achieved 99.42% accuracy at the 17th Epoch  with lr=0.005, batch size=64
 ------------------------------------------------------------------------------------------------------
 6. Not used Fully connected layers
