@@ -1,6 +1,7 @@
 
 Session 5 : Final Code7 is able to get 99.4 test accuracy with 15 epochs and 9.4K parameters.
 
+https://colab.research.google.com/drive/1ZWrqoqzc5Oybm1buWOztxtk1piXyunKp#scrollTo=7FXQlB9kH1ov
 
 
 
