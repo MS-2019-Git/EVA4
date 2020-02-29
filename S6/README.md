@@ -9,6 +9,7 @@ with L1 and L2
 
 Validation Accuracy and Loss change Graph Path:
 -------------------------------------------------
+https://github.com/MohuaSinha/EVA4/blob/master/S6/GRAPHS.png
 
 
 
