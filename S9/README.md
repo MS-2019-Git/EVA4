@@ -1,5 +1,7 @@
 ﻿Albumentations module and GradCam module added.
+ 
  87.08% accuracy achieved in 30 epochs.
+ --------------------------------------------
  
  
  0%|          | 0/391 [00:00<?, ?it/s]EPOCH: 0
