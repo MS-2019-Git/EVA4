@@ -21,7 +21,7 @@ def model_params(model, input_size,device):
  model = Net().to(device)
  summary(model, input_size)
 
-def L1_regularization(model, data, factor=0.00025):
+def L1_regularization(model, data, factor=0.00005):
   l1_crit = nn.L1Loss().to(device)
   reg_loss = 0
   for param in model.parameters():
@@ -55,7 +55,7 @@ def train(model, device, train_loader, optimizer, epoch,isL1Regularization):
     loss = criterion(y_pred, target)
     #loss = F.nll_loss(y_pred, target)
     if isL1Regularization:
-      loss += L1_regularization(model,data,factor=0.00025)
+      loss += L1_regularization(model,data,factor=0.00005)
     train_losses.append(loss)
 
     # Backpropagation
