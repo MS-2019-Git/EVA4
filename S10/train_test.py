@@ -29,7 +29,7 @@ def L1_regularization(model, data, factor=0.00005):
     reg_loss += l1_crit(param, zero_vector)
   return factor * reg_loss
 
-def train(model, device, train_loader, optimizer, epoch,isL1Regularization):
+def train(model, device, train_loader, optimizer,scheduler, epoch,isL1Regularization,best_loss):
 
   train_losses = []
   train_acc = []
@@ -70,8 +70,13 @@ def train(model, device, train_loader, optimizer, epoch,isL1Regularization):
 
     pbar.set_description(desc= f'Loss={loss.item()} Batch_id={batch_idx} Accuracy={100*correct/processed:0.2f}')
     train_acc.append(100*correct/processed)
+    if (best_loss*0.996) > running_loss:
+      best_loss = running_loss
+  pbar.set_description(desc= f'Loss={loss.item()} Batch_id={batch_idx} Accuracy={100*correct/processed:0.2f} running_loss={running_loss} threshold={best_loss*(0.996)}')
+  scheduler.step(running_loss)
+  return best_loss
 
-def test(model, device, test_loader):
+def test(model, device, test_loader,misclassified_list):
     test_losses = []
     test_acc = []
     model.eval()
@@ -80,11 +85,19 @@ def test(model, device, test_loader):
     criterion = nn.CrossEntropyLoss()
     with torch.no_grad():
         for data, target in test_loader:
+            i=len(misclassified_list)
+            orig_data=data.numpy()
             data, target = data.to(device), target.to(device)
             output = model(data)
-            test_loss += criterion(output, target).item()
-            #test_loss += F.nll_loss(output, target, reduction='sum').item()  # sum up batch loss
+            test_loss += criterion(output, target).item()  # sum up batch loss
             pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
+            new_target=target.view_as(pred)
+            for x,y,z in zip(pred,new_target,orig_data):
+              if x!=y:
+                # print("type= {} {} ".format(x,y))
+                # print("Z", z.shape)
+                misclassified_list[i]=[x,y,z]
+                i +=1
             correct += pred.eq(target.view_as(pred)).sum().item()
 
     test_loss /= len(test_loader.dataset)
