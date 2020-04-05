@@ -11,6 +11,8 @@
 7) Accuracy_change.png is the graph for training and test accuracy change.
 
 Library contains below 11 modules in python files:
+--------------------------------------------------
+
 config.py
 datatransformation.py
 displayimages.py
