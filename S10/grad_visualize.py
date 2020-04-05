@@ -37,11 +37,11 @@ class VisualizeCam(object):
 	    result = result.div(result.max()).squeeze()
 	    return heatmap, result
 
-	def plot_heatmaps(self, img_data, target_class, img_name):
+	def plot_heatmaps_indvidual(self, img_data, truth_class, pred_class, img_name):
 		fig, axs = plt.subplots(nrows=2, ncols=5, figsize=(10, 4),
 			subplot_kw={'xticks': [], 'yticks': []})
-		fig.suptitle('GradCam at different conv layers for the class: %s' % 
-			target_class, fontsize=13, weight='medium', y=1.05)
+		fig.suptitle('GradCam at different conv layers for the class: %s\nActual: %s - Predicted: %s' % 
+			(pred_class, truth_class, pred_class), fontsize=13, weight='medium', y=1.05)
 
 		for ax, data in zip(axs.flat, img_data):
 			img = data["img"]
@@ -50,7 +50,23 @@ class VisualizeCam(object):
 			ax.set_title("%s" % (data["label"]))
 
 		plt.savefig(img_name)
+		
+		
+	def plot_heatmaps(self, img_data, img_name):
+		fig, axs = plt.subplots(nrows=len(img_data), ncols=3, figsize=(6, 50),
+			subplot_kw={'xticks': [], 'yticks': []})
 
+		for i in range(len(img_data)):
+			data = img_data[i]
+			for j in range(len(data)):
+				img = data[j]["img"]
+				npimg = img.cpu().numpy()
+				axs[i][j].axis('off')
+				axs[i][j].set_title(data[j]["label"])
+				axs[i][j].imshow(np.transpose(npimg, (1, 2, 0)))
+
+		fig.tight_layout()
+		fig.savefig(img_name)	
 
 	def __call__(self, images, truth_inds, target_layers, target_inds=None,
 				metric="", per_image=True):
