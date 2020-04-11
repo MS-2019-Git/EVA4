@@ -13,6 +13,7 @@ import torchvision.transforms as transforms
 from torchvision import datasets, transforms
 import numpy as np
 from torch.utils.data import DataLoader, Dataset
+from albumentations import PadIfNeeded,RandomCrop,HorizontalFlip, Cutout 
 
 
 def load():
@@ -21,7 +22,11 @@ def load():
                                             #  transforms.Resize((28, 28)),
                                             #  transforms.ColorJitter(brightness=0.10, contrast=0.1, saturation=0.10, hue=0.1),
                                             #transforms.RandomRotation((-7.0, 7.0), fill=(1,)),
+                                            PadIfNeeded(min_height=36, min_width=36, border_mode = cv2.BORDER_REFLECT, always_apply=True),
                                             transforms.ToTensor(),
+                                            RandomCrop(height=32, width=32, always_apply=True),
+												                    HorizontalFlip(p=0.5),
+                                            Cutout(num_holes=1, max_h_size=8,max_w_size = 8,p = 0.7),
                                             transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)) # The mean and std have to be sequences (e.g., tuples), therefore you should add a comma after the values. 
                                             # Note the difference between (0.1307) and (0.1307,)
                                             ])
