@@ -1,4 +1,9 @@
-Assignment 2:
+1:
+----
+Training for OpenCV YOLOV3  on coco dataset. Reference: https://pysource.com/2019/06/27/yolo-object-detection-using-opencv-with-python/
+
+2:
+----
 
 Training Custom Dataset on Colab for YoloV3
 Refer to this Colab File: LINK (https://colab.research.google.com/drive/1LbKkQf4hbIuiUHunLlvY-cc0d_sNcAgS)
