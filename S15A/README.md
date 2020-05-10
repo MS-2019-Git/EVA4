@@ -26,7 +26,7 @@ https://drive.google.com/drive/u/0/folders/1sdyGO83qvwteiXLBqJnxPH6NwgnVPZAq
 <img src="Dataset/fg_bg_mask/fg_bg_mask_638.jpg" width="150" > <img src="Dataset/fg_bg_mask/fg_bg_mask_3173.jpg" width="150" > <img src="Dataset/fg_bg_mask/fg_bg_mask_26682.jpg" width="150" > <img src="Dataset/fg_bg_mask/fg_bg_mask_37898.jpg" width="150" > <img src="Dataset/fg_bg_mask/fg_bg_mask_39553.jpg" width="150" > 
 
 ## Depthmap for Generated Images
-<img src="depthmap/depth_638.jpg" width="150" > <img src="depthmap/depth_3173.jpg" width="150" > <img src="depthmap/depth_26682.jpg" width="150" > <img src="depthmap/depth_37898.jpg" width="150" > <img src="depthmap/depth_39553.jpg" width="150" >
+<img src="Dataset/depthmap/depth_638.jpg" width="150" > <img src="Dataset/depthmap/depth_3173.jpg" width="150" > <img src="Dataset/depthmap/depth_26682.jpg" width="150" > <img src="Dataset/depthmap/depth_37898.jpg" width="150" > <img src="Dataset/depthmap/depth_39553.jpg" width="150" >
 
 ## Dataset Description
 The dataset consists of following types of images: </br>
