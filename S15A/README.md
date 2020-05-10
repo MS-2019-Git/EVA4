@@ -2,8 +2,9 @@
 ### Team Members ###
 | Name | Canvas Id |
 | ----------- | ---------- |
-| Deepjyoti Saha  |  deepjyoti.saha@gmail.com |
 | Mohua Sinha | sikdermohua@gmail.com |
+| Deepjyoti Saha  |  deepjyoti.saha@gmail.com |
+
 
 ## Dataset Download
 You can download the complete dataset from the google drive link below"
