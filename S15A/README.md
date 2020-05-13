@@ -9,7 +9,7 @@
 ## Dataset Download
 You can download the complete dataset from the google drive link below"
 ```
-https://drive.google.com/drive/u/0/folders/1sdyGO83qvwteiXLBqJnxPH6NwgnVPZAq
+[Dataset Generated](https://drive.google.com/drive/u/0/folders/1qtppG6Nnf9WClSNOuRWS4fUMJUYsJga0)
 ```
 ## Background Images
 <img src="Dataset/bg/bg_1.jpg" width="150" > <img src="Dataset/bg/bg_2.jpg" width="150" > <img src="Dataset/bg/bg_3.jpg" width="150" > <img src="Dataset/bg/bg_5.jpg" width="150" > <img src="Dataset/bg/bg_10.jpg" width="150" > 
@@ -59,10 +59,13 @@ The dataset consists of following types of images: </br>
 
 ## Dataset Generation Process
 The following steps were followed to create the dataset: </br>
-* Background Images: These images were downlaoded from the internet.
-* Foreground Images: These images were downlaoded from the internet. The background from the images were removed using Microsoft Powerpoint "Remove Background" feature
+* Background Images: These images of park scenes are downlaoded from the internet.
+* Foreground Images: These images of dog are downlaoded from the internet. The background from the images were removed using Microsoft Powerpoint "Remove Background" feature.
 * Foreground Mask Images: These images were generated using GIMP image editor. 
 * Generated Images: These images were generated using a custom code. 
-* Mask for Generated Images: These images were generated using a custom code. https://github.com/MohuaSinha/EVA4/blob/master/S15A/S15A_Dataset_Generation_FlipnOverlay.ipynb
-* Depthmap Images:These images were generated using a DenseDepth model. This code can be found here.https://github.com/MohuaSinha/EVA4/blob/master/S15A/S15A_DenseDepthMap_Generation.ipynb
+* Mask for Generated Images: These are fg_bg_mask generated for fg_bg images.The fg images and fg masks are fliped. Then these overlayed on the bg images.[Colab file for fg_bg & fg_bg_mask generation](https://github.com/MohuaSinha/EVA4/blob/master/S15A/S15A_Dataset_Generation_FlipnOverlay.ipynb)
+* Depthmap Images:These images were generated using a DenseDepth model.[Colab file for DenseDepthmap Images Generation](https://github.com/MohuaSinha/EVA4/blob/master/S15A/S15A_DenseDepthMap_Generation.ipynb)
 
+
+## Reference: 
+[DenseDepth](https://github.com/ialhashim/DenseDepth)
