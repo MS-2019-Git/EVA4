@@ -1,9 +1,4 @@
-# EVA4 15A : Dataset Generation
-### Team Members ###
-| Name | Canvas Id |
-| ----------- | ---------- |
-| Mohua Sinha | sikdermohua@gmail.com |
-| Deepjyoti Saha  |  deepjyoti.saha@gmail.com |
+# EVA4 15B : Monocular Depth Estimation
 
 
 ## Dataset Download
