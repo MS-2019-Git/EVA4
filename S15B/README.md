@@ -27,7 +27,7 @@ The dataset consists of following types of images: </br>
 
 ### Total Count of Images ###
 
-| Image Type  | Number of Images |
+|Image Type  | Number of Images |
 | ------------- | ------------- |
 | Background Image  | 100  |
 | Foreground Image  | 100  |
@@ -36,7 +36,8 @@ The dataset consists of following types of images: </br>
 | Generated Image Mask  | 400000  |
 | Depthmap Image  | 400000 |
 
-## [Code](https://github.com/MohuaSinha/EVA4/blob/master/S15B/S15B_Trial1.ipynb)
+## Code
+ [Here](https://github.com/MohuaSinha/EVA4/blob/master/S15B/S15B_Trial1.ipynb)
 
 ## Reference: 
 [DenseDepth](https://github.com/ialhashim/DenseDepth)
