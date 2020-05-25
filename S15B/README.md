@@ -14,7 +14,7 @@ You can download the complete dataset from the google drive link below :
 
 
 ## Dataset of 400k Images
-The github code is available at:(https://github.com/MohuaSinha/EVA4/tree/master/S15A)
+The github code is available [here](https://github.com/MohuaSinha/EVA4/tree/master/S15A)
 
 ## Dataset Description
 The dataset consists of following types of images: </br>
@@ -36,6 +36,7 @@ The dataset consists of following types of images: </br>
 | Generated Image Mask  | 400000  |
 | Depthmap Image  | 400000 |
 
-## [Code:] (https://github.com/MohuaSinha/EVA4/blob/master/S15B/S15B_Trial1.ipynb)
+## [Code](https://github.com/MohuaSinha/EVA4/blob/master/S15B/S15B_Trial1.ipynb)
+
 ## Reference: 
 [DenseDepth](https://github.com/ialhashim/DenseDepth)
