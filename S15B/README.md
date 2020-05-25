@@ -1,27 +1,20 @@
-# EVA4 15B : Monocular Depth Estimation
+# EVA4 15B : Monocular DepthMap and Mask Prediction
+
+## Problem Statement:
+Given 2 images:
+1 image having foreground objects & background scene 
+1 background image,
+predict the depth map as well as a mask for the foreground object. 
 
 
 ## Dataset Download
 You can download the complete dataset from the google drive link below :
 [Generated Dataset of 400K DepthMap Images](https://drive.google.com/drive/u/0/folders/1qtppG6Nnf9WClSNOuRWS4fUMJUYsJga0)
 
-## Background Images
-<img src="Dataset/bg/bg_1.jpg" width="150" > <img src="Dataset/bg/bg_2.jpg" width="150" > <img src="Dataset/bg/bg_3.jpg" width="150" > <img src="Dataset/bg/bg_5.jpg" width="150" > <img src="Dataset/bg/bg_10.jpg" width="150" > 
 
-## Foreground Images
-<img src="Dataset/fg/fg_1.png" width="150" > <img src="Dataset/fg/fg_2.png" width="150" > <img src="Dataset/fg/fg_3.png" width="150" > <img src="Dataset/fg/fg_5.png" width="150" > <img src="Dataset/fg/fg_7.png" width="150" > 
 
-## Foreground Mask Images
-<img src="Dataset/fg_mask/fg_1.jpg" width="150" > <img src="Dataset/fg_mask/fg_2.jpg" width="150" > <img src="Dataset/fg_mask/fg_3.jpg" width="150" > <img src="Dataset/fg_mask/fg_5.jpg" width="150" > <img src="Dataset/fg_mask/fg_7.jpg" width="150" > 
-
-## Generated Images (superimpose foreground on background image)
-<img src="Dataset/fg_bg/fg_bg_638.jpg" width="150" > <img src="Dataset/fg_bg/fg_bg_3173.jpg" width="150" > <img src="Dataset/fg_bg/fg_bg_26682.jpg" width="150" > <img src="Dataset/fg_bg/fg_bg_37898.jpg" width="150" > <img src="Dataset/fg_bg/fg_bg_39553.jpg" width="150" > 
-
-## Masks for Generated Images 
-<img src="Dataset/fg_bg_mask/fg_bg_mask_638.jpg" width="150" > <img src="Dataset/fg_bg_mask/fg_bg_mask_3173.jpg" width="150" > <img src="Dataset/fg_bg_mask/fg_bg_mask_26682.jpg" width="150" > <img src="Dataset/fg_bg_mask/fg_bg_mask_37898.jpg" width="150" > <img src="Dataset/fg_bg_mask/fg_bg_mask_39553.jpg" width="150" > 
-
-## Depthmap for Generated Images
-<img src="Dataset/depthmap/depth_638.jpg" width="150" > <img src="Dataset/depthmap/depth_3173.jpg" width="150" > <img src="Dataset/depthmap/depth_26682.jpg" width="150" > <img src="Dataset/depthmap/depth_37898.jpg" width="150" > <img src="Dataset/depthmap/depth_39553.jpg" width="150" >
+## Dataset of 400k Images
+The github code is available at:(https://github.com/MohuaSinha/EVA4/tree/master/S15A)
 
 ## Dataset Description
 The dataset consists of following types of images: </br>
@@ -43,23 +36,6 @@ The dataset consists of following types of images: </br>
 | Generated Image Mask  | 400000  |
 | Depthmap Image  | 400000 |
 
-### Dataset Statistics ###
-| Image Type  | Mean | Standard Deviation |
-| ----------- | ---------- | ---------------- |
-| Generated Image  | [0.50169254 0.51531572 0.38720035]  | [0.25096876 0.2417532  0.28520041]  |
-| Generated Image Mask  | [0.09301607 0.09301607 0.09301607]  | [0.28483643 0.28483643 0.28483643]  |
-| Depthmap Image   | [0.34092307 0.34092307 0.34092307]  | [0.23391564 0.23391564 0.23391564]  |
-
-
-## Dataset Generation Process
-The following steps were followed to create the dataset: </br>
-* Background Images: These images of park scenes are downlaoded from the internet.
-* Foreground Images: These images of dog are downlaoded from the internet. The background from the images were removed using Microsoft Powerpoint "Remove Background" feature.
-* Foreground Mask Images: These images were generated using GIMP image editor. 
-* Generated Images: These images were generated using a custom code. 
-* Mask for Generated Images: These are fg_bg_mask generated for fg_bg images.The fg images and fg masks are fliped. Then these overlayed on the bg images.[Colab file for fg_bg & fg_bg_mask generation](https://github.com/MohuaSinha/EVA4/blob/master/S15A/S15A_Dataset_Generation_FlipnOverlay.ipynb)
-* Depthmap Images:These images were generated using a DenseDepth model.[Colab file for DenseDepthmap Images Generation](https://github.com/MohuaSinha/EVA4/blob/master/S15A/S15A_DenseDepthMap_Generation.ipynb)
-
-
+## [Code:] (https://github.com/MohuaSinha/EVA4/blob/master/S15B/S15B_Trial1.ipynb)
 ## Reference: 
 [DenseDepth](https://github.com/ialhashim/DenseDepth)
